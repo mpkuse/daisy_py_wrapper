@@ -5,17 +5,17 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 echo -e "${RED}Compiling ${NC}"
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/corecv.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/daisy.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/general.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_bmp.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_jpeg.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_png.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_pnm.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_manipulation.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/interaction.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/main.cpp
-g++ -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/progress_bar.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/corecv.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/daisy.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/general.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_bmp.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_jpeg.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_png.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_io_pnm.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/image_manipulation.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/interaction.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/main.cpp
+g++ -O3 -fPIC -c -I ${DAISY_BASE}include ${DAISY_BASE}src/progress_bar.cpp
 
 # mkdir lib
 echo "${RED}Linking to create libtoto.so ${NC}"
