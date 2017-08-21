@@ -53,6 +53,7 @@ DIST_DIR="DaisyMeld"
 mkdir $DIST_DIR
 cp _daisymeld.so daisymeld.py libtoto.so $DIST_DIR
 touch ${DIST_DIR}/__init__.py
+echo "see https://github.com/mpkuse/daisy_py_wrapper" >> ${DIST_DIR}/README.md
 
 echo "Copy files for distrubution in directory : daisy_py_distribute"
 
