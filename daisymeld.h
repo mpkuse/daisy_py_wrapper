@@ -8,13 +8,13 @@
 #include "daisy/daisy.h"
 
 
-//TODO : Another way to go about this might be to use inheritance. Basically inherit the class `daisy`. This way you will have access to all the internal functions with python 
+//TODO : Another way to go about this might be to use inheritance. Basically inherit the class `daisy`. This way you will have access to all the internal functions with python
 class DaisyMeld
 {
 public:
   DaisyMeld();
 
-  std::vector<float> hook( std::vector<float> image_data, std::vector<int> dim  );
+  const std::vector<float> hook( const std::vector<float>& image_data, const std::vector<int>& dim  );
 
 private:
   daisy * desc;

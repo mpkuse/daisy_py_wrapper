@@ -48,6 +48,14 @@ g++ -shared daisymeld.o daisymeld_wrap.o -L . -ltoto -o _daisymeld.so
 
 
 echo "${GREEN}Wrapper is ready...!${NC}"
+
+DIST_DIR="DaisyMeld"
+mkdir $DIST_DIR
+cp _daisymeld.so daisymeld.py libtoto.so $DIST_DIR
+touch ${DIST_DIR}/__init__.py
+
+echo "Copy files for distrubution in directory : daisy_py_distribute"
+
 echo "${GREEN}Now you can use daisymeld with python (see daisy_with_py.py). ${NC}"
 echo "Sample Python Program : "
 echo "from daisymeld import DaisyMeld"
