@@ -28,6 +28,7 @@ echo "${RED}Copy include${NC}"
 cp -r ${DAISY_BASE}include ./
 
 echo "compile your program as : g++ main.cpp -I include/ -L . -ltoto"
+echo "compile your program as : g++ main.cpp daisymeld.cpp -I include/ -L . -ltoto"
 
 
 echo "---"
@@ -61,6 +62,16 @@ echo "${GREEN}Now you can use daisymeld with python (see daisy_with_py.py). ${NC
 echo "Sample Python Program : "
 echo "from daisymeld import DaisyMeld"
 echo "import numpy as np"
-echo "dai = DaisyMeld()"
-echo "X = np.random.random( (6,4) )"
+echo "dai = DaisyMeld(0,0,0) #doesnot matter if using hook() based call"
+echo "X = np.random.random( (60,40) )"
 echo "dai.hook( X.flatten(), X.shape )"
+
+
+echo ""
+echo "Sample Usage with Direct Memory View (no copy of data, hence lot faster)"
+echo "from daisymeld import DaisyMeld"
+echo "import numpy as np"
+echo "dai = DaisyMeld(240,320,0) #doesnot matter if using hook() based call"
+echo "X = np.random.random( (240,320), dtype='float32' )"
+echo "dai.do_daisy_computation( X )"
+echo "vii = dai.get_daisy_view()"

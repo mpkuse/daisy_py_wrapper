@@ -2,8 +2,11 @@
 #include <boost/timer.hpp>
 #include "daisy/daisy.h"
 
+#include "daisymeld.h"
+
 int main()
 {
+  /*
   boost::timer t;
   t.restart();
 
@@ -21,5 +24,11 @@ int main()
     float * daisy_dense = desc->get_dense_descriptors(); // this will be NxMx (desc->descriptor_size() )
     cout << "descriptor size : " << desc->descriptor_size() << endl;
     cout << "Time taken : " << t.elapsed() << endl;
+    */
+
+    DaisyMeld meld = DaisyMeld();
+    double f[4] = {1.,1.,2.,2.};
+    cout << "RMS : "<< meld.rms(f, 4) << endl;
+
 
 }
