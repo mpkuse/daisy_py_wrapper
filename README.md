@@ -65,6 +65,10 @@ using numpy.i with SWIG.
 See [here](https://docs.scipy.org/doc/numpy-1.13.0/reference/swig.interface-file.html)
 for how to do it.
 
+## Common Pitfalls
+Make sure you have swig installed. 
+``` sudo apt-get install swig-2.0```
+
 ## Author
 Manohar Kuse <mpkuse (at) connect . ust . hk>
 Hope this help!
