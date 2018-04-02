@@ -1,56 +1,24 @@
-from daisymeld import DaisyMeld
+#from daisymeld import DaisyMeld
+try:
+    from DaisyMeld.daisymeld import DaisyMeld
+except:
+    print 'If you get this error, your DaisyMeld wrapper is not properly setup. You need to set DaisyMeld in LD_LIBRARY_PATH. and PYTHONPATH contains parent of DaisyMeld'
+    print 'See also : https://github.com/mpkuse/daisy_py_wrapper'
+    print 'Do: export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Downloads/daisy_py_wrapper/DaisyMeld'
+    print 'do: export PYTHONPATH=$PYTHONPATH:$HOME/Downloads/daisy_py_wrapper/'
+    quit()
+    
 import numpy as np
 import cv2
 import time
 
-im = cv2.imread( 'images/kf_75.png', 0 )
+im = cv2.imread( 'images/kf_75.png', 0 ) #240x320x1 (needed 1 channel image)
 cv2.imshow( 'im', im )
 cv2.waitKey(0)
 
 
 # h, w
-dai = DaisyMeld(240, 320, 1)
-# startT = time.time()
-# for u in range(10):
-#     output = dai.hook( np.float64(im.flatten()), im.shape )
-#     # dai.hook_noreturn( np.float64(im.flatten()), im.shape )
-# print 'Time taken (py in ms) : ', 1000. * (time.time() - startT)
-# output = np.array( output ).reshape( im.shape[0], im.shape[1], -1 )
-# # the_ascii = np.loadtxt( 'out.ascii' ).reshape(  im.shape[0], im.shape[1], -1 )
-
-
-startT = time.time()
-print dai.rms( np.random.rand( 1000000 ) )
-print 'Time taken (py in ms) : ', 1000. * (time.time() - startT)
-
-
-startT = time.time()
-im_rand = np.random.random( (1000,1000 ) )
-print dai.sum2d( im_rand )
-print 'Time taken (py in ms) : ', 1000. * (time.time() - startT)
-
-
-
-# startT = time.time()
-# im_rand = np.random.random( (1000,1000 ) )
-# im64 = im.copy().astype( 'float64' )
-# print im64
-# print dai.im_neg( im64 )
-# print im64
-# print 'Time taken (py in ms) : ', 1000. * (time.time() - startT)
-# cv2.imshow( 'im', im64.astype('uint8') )
-# cv2.waitKey(0)
-
-
-
-# im_rand = np.random.random( (100,200) )
-# im_rand2 = np.random.random( (240,320) )
-# dai.add_im( im_rand, im_rand2 )
-
-
-# v_rand = np.random.random( 100 )
-# v_rand2 = np.random.random( 100 )
-# dai.dot( v_rand, v_rand2 )
+dai = DaisyMeld(240, 320, 1) #this 1 is for verbosity, 0 will mute all the messages
 
 
 im32 = im.copy().astype( 'float32' )
