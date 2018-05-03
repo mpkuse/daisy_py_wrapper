@@ -1,13 +1,17 @@
 #from daisymeld import DaisyMeld
+import os
 try:
     from DaisyMeld.daisymeld import DaisyMeld
 except:
     print 'If you get this error, your DaisyMeld wrapper is not properly setup. You need to set DaisyMeld in LD_LIBRARY_PATH. and PYTHONPATH contains parent of DaisyMeld'
     print 'See also : https://github.com/mpkuse/daisy_py_wrapper'
-    print 'Do: export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Downloads/daisy_py_wrapper/DaisyMeld'
-    print 'do: export PYTHONPATH=$PYTHONPATH:$HOME/Downloads/daisy_py_wrapper/'
+    cwd = os.getcwd()
+    # print 'Do: export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Downloads/daisy_py_wrapper/DaisyMeld'
+    # print 'do: export PYTHONPATH=$PYTHONPATH:$HOME/Downloads/daisy_py_wrapper/'
+    print 'Do: export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:%s/DaisyMeld' %(cwd)
+    print 'do: export PYTHONPATH=$PYTHONPATH:%s' %(cwd)
     quit()
-    
+
 import numpy as np
 import cv2
 import time

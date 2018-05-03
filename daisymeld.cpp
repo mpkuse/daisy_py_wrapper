@@ -74,7 +74,9 @@ void DaisyMeld::do_daisy_computation( float * seq, int d1, int d2 )
 
 void DaisyMeld::get_daisy_view( float** vec, int* d1, int* d2, int* d3 )
 {
+  #ifdef _PRINTING_
   cout << "get_view()\n";
+  #endif
   *vec = descriptors;
   *d3 = desc->descriptor_size(); //20;
   *d1 = 240;

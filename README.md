@@ -20,6 +20,11 @@ Tola, Engin, Vincent Lepetit, and Pascal Fua. "Daisy: An efficient dense descrip
 
 Winder, Simon, Gang Hua, and Matthew Brown. "Picking the best daisy." Computer Vision and Pattern Recognition, 2009. CVPR 2009. IEEE Conference on. IEEE, 2009.
 
+## Other Papers that Use Daisy-descriptor 
+Yang, Hongsheng, Wen-Yan Lin, and Jiangbo Lu. "Daisy filter flow: A generalized discrete approach to dense correspondences." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2014.
+
+
+
 ## Credits
 I have used the [original code](http://cvlab.epfl.ch/software/daisy) from CVLAB by E. Tola.
 
@@ -66,7 +71,7 @@ See [here](https://docs.scipy.org/doc/numpy-1.13.0/reference/swig.interface-file
 for how to do it.
 
 ## Common Pitfalls
-Make sure you have swig installed. 
+Make sure you have swig installed.
 ``` sudo apt-get install swig-2.0```
 
 ## Author
