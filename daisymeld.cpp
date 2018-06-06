@@ -79,8 +79,8 @@ void DaisyMeld::get_daisy_view( float** vec, int* d1, int* d2, int* d3 )
   #endif
   *vec = descriptors;
   *d3 = desc->descriptor_size(); //20;
-  *d1 = 240;
-  *d2 = 320;
+  *d1 = m_h; //240;
+  *d2 = m_w; //320;
 }
 
 
