@@ -20,7 +20,7 @@ Tola, Engin, Vincent Lepetit, and Pascal Fua. "Daisy: An efficient dense descrip
 
 Winder, Simon, Gang Hua, and Matthew Brown. "Picking the best daisy." Computer Vision and Pattern Recognition, 2009. CVPR 2009. IEEE Conference on. IEEE, 2009.
 
-## Other Papers that Use Daisy-descriptor 
+## Other Papers that Use Daisy-descriptor
 Yang, Hongsheng, Wen-Yan Lin, and Jiangbo Lu. "Daisy filter flow: A generalized discrete approach to dense correspondences." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2014.
 
 
@@ -77,3 +77,35 @@ Make sure you have swig installed.
 ## Author
 Manohar Kuse <mpkuse (at) connect . ust . hk>
 Hope this help!
+
+## Sample Results
+Input Image: <br/>
+<img src="images/lena.png" width="40%"/>
+<br/>
+Showing 20 channels: <br/>
+<img src="images/results/1.png" width="22%"/>
+<img src="images/results/2.png" width="22%"/>
+<img src="images/results/3.png" width="22%"/>
+<img src="images/results/4.png" width="22%"/>
+
+<img src="images/results/5.png" width="22%"/>
+<img src="images/results/6.png" width="22%"/>
+<img src="images/results/7.png" width="22%"/>
+<img src="images/results/8.png" width="22%"/>
+
+<img src="images/results/9.png" width="22%"/>
+<img src="images/results/10.png" width="22%"/>
+<img src="images/results/11.png" width="22%"/>
+<img src="images/results/12.png" width="22%"/>
+
+<img src="images/results/13.png" width="22%"/>
+<img src="images/results/14.png" width="22%"/>
+<img src="images/results/15.png" width="22%"/>
+<img src="images/results/16.png" width="22%"/>
+
+<img src="images/results/17.png" width="22%"/>
+<img src="images/results/18.png" width="22%"/>
+<img src="images/results/19.png" width="22%"/>
+<img src="images/results/0.png" width="22%"/>
+
+1,5,9,... (1st column) might seem similar due to false-coloring. I have verified that, the descriptor values are different in those cases. 

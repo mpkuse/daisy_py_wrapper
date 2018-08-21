@@ -48,6 +48,8 @@ for i in range( vi.shape[2] ):
     key = cv2.waitKey(0)
     if key == ord( 'q' ):
         break
+    if key == ord( 'w' ): 
+	cv2.imwrite( 'images/results/%d.png' %(i), (255*vi[:,:,i]).astype('uint8') ) 
 #cv2.imshow( 'vi0', (255*vi[:,:,0]).astype('uint8') )
 #cv2.imshow( 'vi1', (255*vi[:,:,1]).astype('uint8') )
 #cv2.imshow( 'vi2', (255*vi[:,:,2]).astype('uint8') )
